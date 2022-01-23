@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "203166187700",
+    "project_id": "ocr-text-scanner-4481f",
+    "storage_bucket": "ocr-text-scanner-4481f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203166187700:android:aee4ea988f584cbdcad7e1",
+        "android_client_info": {
+          "package_name": "com.vaibhav.ocr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203166187700-178g094nj23psi82n8ecghlsjbtj4i2s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vaibhav.ocr",
+            "certificate_hash": "0124f943231bb669f3b52a9036354b2644cfec9d"
+          }
+        },
+        {
+          "client_id": "203166187700-g9okeetah648fcd5ep8rkfemtpsg3a1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqq4QEFOqx-0gDlcLC7vW6Xnk9IiZf3II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203166187700-g9okeetah648fcd5ep8rkfemtpsg3a1p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
