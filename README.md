@@ -1,8 +1,13 @@
-# Text Scanner App using OCR Computer Vision - Flutter 
+# Deploying TensorFlow Lite models with flutter
 
-OCR represents Optical Character Recognition. It is a cycle of transformation of composed pictures, printed text into the machine-encoded text, which implies it will give us a text from images that contain the text.
+## Consist of following Functionalities
+ - Flower Prediction
+ - Cat & Dog Prediction
+ - Text Recongnition
+      - OCR represents Optical Character Recognition. It is a cycle of transformation of composed pictures, printed text into the machine-encoded text, which implies it will give us a text from images that contain the text.
+ - Face Mask Detection
+ - Emotion Detection [ COMING SOON]
 
-<img src="https://github.com/vaibhavhariaramani/Text-Scanner-App-using-OCR-Computer-Vision/blob/main/project%20image/Screenshot_20210208-173137.jpg"  height="330" width="250"> <img src="https://github.com/vaibhavhariaramani/Text-Scanner-App-using-OCR-Computer-Vision/blob/main/project%20image/Screenshot_20210208-173127.jpg" height="330" width="250"> <img src="https://github.com/vaibhavhariaramani/Text-Scanner-App-using-OCR-Computer-Vision/blob/main/project%20image/Screenshot_20210208-173132.jpg"   height="330" width="250">
 
 # Resources 
 
