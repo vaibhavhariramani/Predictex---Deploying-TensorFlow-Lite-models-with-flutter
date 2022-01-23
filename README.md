@@ -13,7 +13,7 @@
 
 To learn more about these Resources you can Refer to some of these articles written by Me:-
 
-https://sites.google.com/view/geeky-traveller/computer-vision/facial-landmarks-detection
+[https://vaibhavji.medium.com/deep-learning-in-android-using-tensorflow-lite-with-flutter-f6e18994748](https://vaibhavji.medium.com/deep-learning-in-android-using-tensorflow-lite-with-flutter-f6e18994748)
 
 
 - [Medium](https://medium.com/geeky-bawa)
