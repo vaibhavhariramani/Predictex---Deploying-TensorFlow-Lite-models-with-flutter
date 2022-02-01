@@ -49,7 +49,7 @@ class cards extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 40.0, top: 100.0),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Flexible(
                     child: Text(

@@ -2,5 +2,4 @@
 //TODO: change package name
 //TODO: create a new card for deep learning 
 //TODO: replace copy button with share button(pub.dev)
-//TODO: hide theme button until moved to getx
 //TODO: dynamicly update exsisting cards
