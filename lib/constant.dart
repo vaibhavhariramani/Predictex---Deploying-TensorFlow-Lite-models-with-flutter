@@ -2,14 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:predictex/example.dart';
 
 class cards extends StatelessWidget {
-  cards(
-      {this.img,
-      this.title,
-      this.subtitle,
-      this.height,
-      this.width,
-      this.colour,
-      this.wid});
+  cards({this.img, this.title, this.subtitle, this.height, this.width, this.colour, this.wid});
 
   final String img;
   final String title;
@@ -22,7 +15,7 @@ class cards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 6),
       child: GestureDetector(
         onTap: () => Navigator.push(
           context,
@@ -39,12 +32,7 @@ class cards extends StatelessWidget {
                 shape: BoxShape.rectangle,
                 color: colour,
                 borderRadius: BorderRadius.circular(20.0),
-                boxShadow: <BoxShadow>[
-                  BoxShadow(
-                      color: Colors.black45,
-                      offset: Offset(0.0, 10.0),
-                      blurRadius: 10.0)
-                ],
+                boxShadow: <BoxShadow>[BoxShadow(color: Colors.black45, offset: Offset(0.0, 10.0), blurRadius: 10.0)],
               ),
             ),
             Container(
@@ -53,6 +41,7 @@ class cards extends StatelessWidget {
                 image: AssetImage(
                   img,
                 ),
+                fit: BoxFit.fitHeight,
                 height: height,
                 width: width,
               ),
@@ -60,25 +49,19 @@ class cards extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 40.0, top: 100.0),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Flexible(
                     child: Text(
                       title,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15.0,
-                          fontWeight: FontWeight.w600),
+                      style: TextStyle(color: Colors.white, fontSize: 15.0, fontWeight: FontWeight.w600),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
                   Flexible(
                     child: Text(
                       subtitle,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15.0,
-                          fontWeight: FontWeight.w600),
+                      style: TextStyle(color: Colors.white, fontSize: 15.0, fontWeight: FontWeight.w600),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),

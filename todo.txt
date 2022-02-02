@@ -1,0 +1,5 @@
+//TODO: change the name to predicteX
+//TODO: change package name
+//TODO: create a new card for deep learning 
+//TODO: replace copy button with share button(pub.dev)
+//TODO: dynamicly update exsisting cards
