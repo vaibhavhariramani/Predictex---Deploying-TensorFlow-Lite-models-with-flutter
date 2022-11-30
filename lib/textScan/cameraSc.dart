@@ -61,7 +61,9 @@ class _CameraScreenState extends State<CameraScreen> {
     }
 
     try {
-      await _controller.takePicture(imagePath);
+      // await _controller.takePicture(imagePath);
+      XFile picture = await _controller.takePicture();
+      picture.saveTo(imagePath);
     } on CameraException catch (e) {
       print("Camera Exception: $e");
       return null;
