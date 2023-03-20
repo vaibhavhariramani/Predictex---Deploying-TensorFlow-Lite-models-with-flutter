@@ -186,8 +186,11 @@ class _DetailScreenState extends State<DetailScreen> {
         foregroundColor: theme ? mainColor : Colors.white,
         onPressed: () {
           Clipboard.setData(new ClipboardData(text: recognizedText));
-          Scaffold.of(context)
-              .showSnackBar(SnackBar(content: Text('Text copied!')));
+          // Scaffold.of(context)
+          //     .showSnackBar(SnackBar(content: Text('Text copied!')));
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Text copied!')),
+          );
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,

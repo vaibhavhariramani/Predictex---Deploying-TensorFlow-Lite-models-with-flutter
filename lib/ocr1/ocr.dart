@@ -23,7 +23,7 @@ class _OCR1State extends State<OCR1> {
           child: ListView(
         children: <Widget>[
           Text(_textValue),
-          RaisedButton(
+          ElevatedButton(
             onPressed: _read,
             child: Text('Start Scanning'),
           ),

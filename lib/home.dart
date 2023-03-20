@@ -50,14 +50,21 @@ class _HomeState extends State<Home> {
               children: <Widget>[
                 const Text(
                   'Predictex',
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400, color: Colors.black87),
+                  style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black87),
                 ),
                 const SizedBox(
                   height: 5.0,
                 ),
                 const Text(
                   'For predicting result using Deep learning',
-                  style: TextStyle(fontSize: 20.0, color: Colors.black, fontWeight: FontWeight.w600, letterSpacing: 2.0),
+                  style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 2.0),
                 ),
                 const SizedBox(
                   height: 10.0,
@@ -71,7 +78,12 @@ class _HomeState extends State<Home> {
                             shape: BoxShape.rectangle,
                             color: const Color(0xFF003D64),
                             borderRadius: BorderRadius.circular(20.0),
-                            boxShadow: const <BoxShadow>[BoxShadow(color: Colors.black45, offset: Offset(0.0, 10.0), blurRadius: 10.0)]),
+                            boxShadow: const <BoxShadow>[
+                              BoxShadow(
+                                  color: Colors.black45,
+                                  offset: Offset(0.0, 10.0),
+                                  blurRadius: 10.0)
+                            ]),
                       ),
                       Container(
                         alignment: FractionalOffset.centerRight,
@@ -84,20 +96,27 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 40.0),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 40.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             const Text(
                               'Model Prediction',
-                              style: TextStyle(color: Colors.white, fontSize: 24.0, fontWeight: FontWeight.w600),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 24.0,
+                                  fontWeight: FontWeight.w600),
                             ),
                             const SizedBox(
                               height: 10.0,
                             ),
                             const Text(
                               'Using TFlite',
-                              style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w600),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.w600),
                             ),
                             const SizedBox(
                               height: 25.0,
@@ -184,12 +203,12 @@ class _HomeState extends State<Home> {
                         wid: CatDog(),
                       ),
                       cards(
-                        colour: Color(0xFFE67E49),
-                        img: 'images/ocr.png',
+                        colour: Color(0xFF000000),
+                        img: 'images/digit_icon.png',
                         height: 120,
                         width: 160,
-                        title: ' Text',
-                        subtitle: 'Recognition-2',
+                        title: ' Hand Written',
+                        subtitle: 'Digit Recognition',
                         wid: OCR1(),
                       ),
                     ],
@@ -204,17 +223,17 @@ class _HomeState extends State<Home> {
                         img: 'images/ocr.png',
                         height: 120,
                         width: 160,
-                        title: ' Text',
-                        subtitle: 'Recognition-1',
-                        wid: CameraScreen(),
+                        title: 'Text',
+                        subtitle: 'Recognition',
+                        wid: OcrCameraScreen(),
                       ),
                       cards(
-                        colour: Color(0xFFE67E49),
-                        img: 'images/ocr.png',
+                        colour: Color(0xFF63636d),
+                        img: 'images/expression_detection_icon.png',
                         height: 120,
                         width: 160,
-                        title: ' Text',
-                        subtitle: 'Recognition-2',
+                        title: ' Facial Expression ',
+                        subtitle: 'Recogniser',
                         wid: OCR1(),
                       ),
                     ],

@@ -91,7 +91,10 @@ class _SecondScreenState extends State<SecondScreen> {
             onPressed: () async {
               final String url = await controller.data.currentUrl();
               _favorites.add(url);
-              Scaffold.of(context).showSnackBar(
+              // Scaffold.of(context).showSnackBar(
+              //   SnackBar(content: Text('Saved $url for later reading.')),
+              // );
+              ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(content: Text('Saved $url for later reading.')),
               );
             },
@@ -129,7 +132,8 @@ class SampleMenu extends StatelessWidget {
                   MaterialPageRoute(builder: (BuildContext context) {
                 return FavoritesPage(favoritesAccessor());
               }));
-              Scaffold.of(context).removeCurrentSnackBar();
+              // Scaffold.of(context).removeCurrentSnackBar();
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
               if (newUrl != null) controller.data.loadUrl(newUrl);
             }
           },
@@ -193,8 +197,11 @@ class NavigationControls extends StatelessWidget {
                       if (await controller.canGoBack()) {
                         controller.goBack();
                       } else {
-                        Scaffold.of(context).showSnackBar(
-                          const SnackBar(content: Text("No back history item")),
+                        // Scaffold.of(context).showSnackBar(
+                        //   const SnackBar(content: Text("No back history item")),
+                        // );
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('No back history item')),
                         );
                         return;
                       }
@@ -208,9 +215,12 @@ class NavigationControls extends StatelessWidget {
                       if (await controller.canGoForward()) {
                         controller.goForward();
                       } else {
-                        Scaffold.of(context).showSnackBar(
-                          const SnackBar(
-                              content: Text("No forward history item")),
+                        // Scaffold.of(context).showSnackBar(
+                        //   const SnackBar(
+                        //       content: Text("No forward history item")),
+                        // );
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('No forward history item"')),
                         );
                         return;
                       }

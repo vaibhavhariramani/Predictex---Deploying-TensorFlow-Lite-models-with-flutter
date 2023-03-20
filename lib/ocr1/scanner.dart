@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+
 import 'package:flutter_mobile_vision/flutter_mobile_vision.dart'
     show FlutterMobileVision, OcrText;
 
@@ -30,7 +31,7 @@ class _MyAppState extends State<MyApp> {
             child: new ListView(
           children: <Widget>[
             new Text(_textValue),
-            new RaisedButton(
+            new ElevatedButton(
               onPressed: _read,
               child: new Text('Start Scanning'),
             ),

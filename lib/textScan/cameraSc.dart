@@ -7,12 +7,12 @@ import 'package:path_provider/path_provider.dart';
 import 'package:predictex/main.dart';
 import 'package:predictex/textScan/image_detail.dart';
 
-class CameraScreen extends StatefulWidget {
+class OcrCameraScreen extends StatefulWidget {
   @override
-  _CameraScreenState createState() => _CameraScreenState();
+  _OcrCameraScreenState createState() => _OcrCameraScreenState();
 }
 
-class _CameraScreenState extends State<CameraScreen> {
+class _OcrCameraScreenState extends State<OcrCameraScreen> {
   CameraController _controller;
 
   @override
