@@ -50,14 +50,21 @@ class _HomeState extends State<Home> {
               children: <Widget>[
                 const Text(
                   'Predictex',
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400, color: Colors.black87),
+                  style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black87),
                 ),
                 const SizedBox(
                   height: 5.0,
                 ),
                 const Text(
                   'For predicting result using Deep learning',
-                  style: TextStyle(fontSize: 20.0, color: Colors.black, fontWeight: FontWeight.w600, letterSpacing: 2.0),
+                  style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 2.0),
                 ),
                 const SizedBox(
                   height: 10.0,
@@ -71,7 +78,12 @@ class _HomeState extends State<Home> {
                             shape: BoxShape.rectangle,
                             color: const Color(0xFF003D64),
                             borderRadius: BorderRadius.circular(20.0),
-                            boxShadow: const <BoxShadow>[BoxShadow(color: Colors.black45, offset: Offset(0.0, 10.0), blurRadius: 10.0)]),
+                            boxShadow: const <BoxShadow>[
+                              BoxShadow(
+                                  color: Colors.black45,
+                                  offset: Offset(0.0, 10.0),
+                                  blurRadius: 10.0)
+                            ]),
                       ),
                       Container(
                         alignment: FractionalOffset.centerRight,
@@ -84,20 +96,27 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 40.0),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 40.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             const Text(
                               'Model Prediction',
-                              style: TextStyle(color: Colors.white, fontSize: 24.0, fontWeight: FontWeight.w600),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 24.0,
+                                  fontWeight: FontWeight.w600),
                             ),
                             const SizedBox(
                               height: 10.0,
                             ),
                             const Text(
                               'Using TFlite',
-                              style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.w600),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.w600),
                             ),
                             const SizedBox(
                               height: 25.0,
@@ -147,13 +166,13 @@ class _HomeState extends State<Home> {
                 ),
                 Expanded(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       cards(
                         colour: Color(0xFF6674F1),
                         img: 'images/wear_mask.png',
-                        height: 100,
-                        width: 160,
+                        height: MediaQuery.of(context).size.height * 0.3,
+                        width: MediaQuery.of(context).size.width * 0.4,
                         title: ' Face Mask ',
                         subtitle: 'Detection',
                         wid: const FaceDetectPage(),
@@ -161,8 +180,8 @@ class _HomeState extends State<Home> {
                       cards(
                         colour: Color(0xFFE44E4F),
                         img: 'images/flower.png',
-                        height: 100,
-                        width: 170,
+                        height: MediaQuery.of(context).size.height * 0.3,
+                        width: MediaQuery.of(context).size.width * 0.4,
                         title: 'Flower',
                         subtitle: 'Detection',
                         wid: FlowerDetect(),
@@ -172,13 +191,13 @@ class _HomeState extends State<Home> {
                 ),
                 Expanded(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       cards(
                         colour: Color(0xFF1A95B6),
                         img: 'images/cat_dog_icon.png',
-                        height: 120,
-                        width: 150,
+                        height: MediaQuery.of(context).size.height * 0.3,
+                        width: MediaQuery.of(context).size.width * 0.4,
                         title: 'Cats & Dogs',
                         subtitle: 'Detection',
                         wid: CatDog(),
@@ -186,8 +205,8 @@ class _HomeState extends State<Home> {
                       cards(
                         colour: Color(0xFFE67E49),
                         img: 'images/ocr.png',
-                        height: 120,
-                        width: 160,
+                        height: MediaQuery.of(context).size.height * 0.3,
+                        width: MediaQuery.of(context).size.width * 0.4,
                         title: ' Text',
                         subtitle: 'Recognition-2',
                         wid: OCR1(),
@@ -197,13 +216,13 @@ class _HomeState extends State<Home> {
                 ),
                 Expanded(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       cards(
                         colour: Color(0xFFE67E49),
                         img: 'images/ocr.png',
-                        height: 120,
-                        width: 160,
+                        height: MediaQuery.of(context).size.height * 0.3,
+                        width: MediaQuery.of(context).size.width * 0.4,
                         title: ' Text',
                         subtitle: 'Recognition-1',
                         wid: CameraScreen(),
@@ -211,8 +230,8 @@ class _HomeState extends State<Home> {
                       cards(
                         colour: Color(0xFFE67E49),
                         img: 'images/ocr.png',
-                        height: 120,
-                        width: 160,
+                        height: MediaQuery.of(context).size.height * 0.3,
+                        width: MediaQuery.of(context).size.width * 0.4,
                         title: ' Text',
                         subtitle: 'Recognition-2',
                         wid: OCR1(),

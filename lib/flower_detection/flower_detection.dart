@@ -11,8 +11,8 @@ class FlowerDetect extends StatefulWidget {
 
 class _FlowerDetectState extends State<FlowerDetect> {
   bool _loading = true;
-  File _image;
-  List _output;
+  late File _image;
+  late List _output;
   final picker = ImagePicker();
 
   @override
@@ -31,7 +31,7 @@ class _FlowerDetectState extends State<FlowerDetect> {
         imageMean: 127.5,
         imageStd: 127.5);
     setState(() {
-      _output = output;
+      _output = output!;
       _loading = false;
     });
   }

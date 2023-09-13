@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:camera/camera.dart';
@@ -13,7 +14,7 @@ class CameraScreen extends StatefulWidget {
 }
 
 class _CameraScreenState extends State<CameraScreen> {
-  CameraController _controller;
+  late CameraController _controller;
 
   @override
   void initState() {
@@ -34,7 +35,7 @@ class _CameraScreenState extends State<CameraScreen> {
     super.dispose();
   }
 
-  Future<String> _takePicture() async {
+  Future<String?> _takePicture() async {
     if (!_controller.value.isInitialized) {
       print("Controller is not initialized");
       return null;
@@ -120,7 +121,7 @@ class _CameraScreenState extends State<CameraScreen> {
                             ),
                           );
                         }
-                      });
+                      } as FutureOr Function(String? value));
                     },
                   ),
                 ),

@@ -4,15 +4,15 @@ import 'package:predictex/main.dart';
 import 'package:tflite/tflite.dart';
 
 class FaceDetectPage extends StatefulWidget {
-  const FaceDetectPage({Key key}) : super(key: key);
+  const FaceDetectPage({Key? key}) : super(key: key);
 
   @override
   _FaceDetectPageState createState() => _FaceDetectPageState();
 }
 
 class _FaceDetectPageState extends State<FaceDetectPage> {
-  CameraImage imgCamera;
-  CameraController cameraController;
+  late CameraImage imgCamera;
+  late CameraController cameraController;
   bool isWorking = false;
   String result = "";
 
@@ -60,7 +60,7 @@ class _FaceDetectPageState extends State<FaceDetectPage> {
 
       result = "";
 
-      recognitions.forEach((response) {
+      recognitions?.forEach((response) {
         result += response["label"] + "\n";
       });
 

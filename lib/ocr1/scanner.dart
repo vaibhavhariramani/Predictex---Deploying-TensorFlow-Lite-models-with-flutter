@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_mobile_vision/flutter_mobile_vision.dart'
+import 'package:flutter_mobile_vision_2/flutter_mobile_vision_2.dart'
     show FlutterMobileVision, OcrText;
 
 void main() => runApp(new MyApp());
@@ -20,7 +20,6 @@ class _MyAppState extends State<MyApp> {
     return new MaterialApp(
       theme: new ThemeData(
         primarySwatch: Colors.red,
-        buttonColor: Colors.red,
       ),
       home: new Scaffold(
         appBar: new AppBar(
@@ -30,7 +29,7 @@ class _MyAppState extends State<MyApp> {
             child: new ListView(
           children: <Widget>[
             new Text(_textValue),
-            new RaisedButton(
+            new ElevatedButton(
               onPressed: _read,
               child: new Text('Start Scanning'),
             ),

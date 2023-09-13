@@ -14,11 +14,10 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreenState extends State<DetailScreen> {
+  final String path;
   _DetailScreenState(this.path);
 
-  final String path;
-
-  Size _imageSize;
+  late Size _imageSize;
   List<TextElement> _elements = [];
   String recognizedText = "Loading ...";
 
@@ -44,8 +43,8 @@ class _DetailScreenState extends State<DetailScreen> {
     String text = "";
     for (TextBlock block in visionText.blocks) {
       for (TextLine line in block.lines) {
-        if (regEx.hasMatch(line.text)) {
-          text += line.text + '\n';
+        if (regEx.hasMatch(line.text!)) {
+          text += (line.text! + '\n');
           for (TextElement element in line.elements) {
             _elements.add(element);
           }
@@ -186,8 +185,10 @@ class _DetailScreenState extends State<DetailScreen> {
         foregroundColor: theme ? mainColor : Colors.white,
         onPressed: () {
           Clipboard.setData(new ClipboardData(text: recognizedText));
-          Scaffold.of(context)
+          ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text('Text copied!')));
+          // Scaffold.of(context)
+          //     .showSnackBar(SnackBar(content: Text('Text copied!')));
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,

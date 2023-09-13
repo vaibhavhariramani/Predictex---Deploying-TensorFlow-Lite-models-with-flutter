@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'package:minimize_app/minimize_app.dart';
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:minimize_app/minimize_app.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 const String kNavigationExamplePage = '''
 <!DOCTYPE html><html>
@@ -20,7 +20,7 @@ The navigation delegate is set to block navigation to the youtube website.
 </body>
 </html>
 ''';
-WebViewController controllerGlobal;
+late WebViewController controllerGlobal;
 
 class SecondScreen extends StatefulWidget {
   @override
@@ -89,11 +89,10 @@ class _SecondScreenState extends State<SecondScreen> {
         if (controller.hasData) {
           return FloatingActionButton(
             onPressed: () async {
-              final String url = await controller.data.currentUrl();
-              _favorites.add(url);
-              Scaffold.of(context).showSnackBar(
-                SnackBar(content: Text('Saved $url for later reading.')),
-              );
+              final String? url = await controller.data?.currentUrl();
+              _favorites.add(url!);
+              ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Saved $url for later reading.')));
             },
             child: const Icon(Icons.favorite),
           );
@@ -121,16 +120,17 @@ class SampleMenu extends StatelessWidget {
         return PopupMenuButton<String>(
           onSelected: (String value) async {
             if (value == 'Email link') {
-              var url = await controller.data.currentUrl();
-              await launch(
-                  'mailto:?subject=Check out this cool blog on deep learning v&body=$url');
+              var url = await controller.data?.currentUrl();
+              // await launch(
+              //     'mailto:?subject=Check out this cool blog on deep learning v&body=$url');
             } else {
               var newUrl = await Navigator.push(context,
                   MaterialPageRoute(builder: (BuildContext context) {
                 return FavoritesPage(favoritesAccessor());
               }));
-              Scaffold.of(context).removeCurrentSnackBar();
-              if (newUrl != null) controller.data.loadUrl(newUrl);
+              ScaffoldMessenger.of(context).removeCurrentSnackBar();
+              // Scaffold.of(context).removeCurrentSnackBar();
+              if (newUrl != null) controller.data?.loadUrl(newUrl);
             }
           },
           itemBuilder: (BuildContext context) => <PopupMenuItem<String>>[
@@ -180,8 +180,8 @@ class NavigationControls extends StatelessWidget {
           (BuildContext context, AsyncSnapshot<WebViewController> snapshot) {
         final bool webViewReady =
             snapshot.connectionState == ConnectionState.done;
-        final WebViewController controller = snapshot.data;
-        controllerGlobal = controller;
+        final WebViewController? controller = snapshot.data;
+        controllerGlobal = controller!;
 
         return Row(
           children: <Widget>[
@@ -193,9 +193,11 @@ class NavigationControls extends StatelessWidget {
                       if (await controller.canGoBack()) {
                         controller.goBack();
                       } else {
-                        Scaffold.of(context).showSnackBar(
-                          const SnackBar(content: Text("No back history item")),
-                        );
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('No back history item')));
+                        // Scaffold.of(context).showSnackBar(
+                        //   const SnackBar(content: Text("No back history item")),
+                        // );
                         return;
                       }
                     },
@@ -208,10 +210,12 @@ class NavigationControls extends StatelessWidget {
                       if (await controller.canGoForward()) {
                         controller.goForward();
                       } else {
-                        Scaffold.of(context).showSnackBar(
-                          const SnackBar(
-                              content: Text("No forward history item")),
-                        );
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('No forward history item')));
+                        // Scaffold.of(context).showSnackBar(
+                        //   const SnackBar(
+                        //       content: Text("No forward history item")),
+                        // );
                         return;
                       }
                     },

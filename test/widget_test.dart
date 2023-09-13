@@ -8,7 +8,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_vision/main.dart';
+import 'package:flutter_mobile_vision_2/flutter_mobile_vision_2.dart';
+import 'package:predictex/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
