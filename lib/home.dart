@@ -7,6 +7,8 @@ import 'package:predictex/ocr1/ocr.dart';
 import 'package:predictex/textScan/cameraSc.dart';
 import 'package:predictex/webViewer/webview.dart';
 
+import 'digit_recognizer/screens/draw_screen.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -207,8 +209,8 @@ class _HomeState extends State<Home> {
                         img: 'images/ocr.png',
                         height: MediaQuery.of(context).size.height * 0.3,
                         width: MediaQuery.of(context).size.width * 0.4,
-                        title: ' Text',
-                        subtitle: 'Recognition-2',
+                        title: ' Text OCR',
+                        subtitle: 'Recognition-1',
                         wid: OCR1(),
                       ),
                     ],
@@ -223,8 +225,8 @@ class _HomeState extends State<Home> {
                         img: 'images/ocr.png',
                         height: MediaQuery.of(context).size.height * 0.3,
                         width: MediaQuery.of(context).size.width * 0.4,
-                        title: ' Text',
-                        subtitle: 'Recognition-1',
+                        title: ' Text OCR',
+                        subtitle: 'Recognition-2',
                         wid: CameraScreen(),
                       ),
                       cards(
@@ -232,9 +234,9 @@ class _HomeState extends State<Home> {
                         img: 'images/ocr.png',
                         height: MediaQuery.of(context).size.height * 0.3,
                         width: MediaQuery.of(context).size.width * 0.4,
-                        title: ' Text',
-                        subtitle: 'Recognition-2',
-                        wid: OCR1(),
+                        title: 'Digit Recognizer',
+                        subtitle: 'from Drawing',
+                        wid: DrawScreen(),
                       ),
                     ],
                   ),
